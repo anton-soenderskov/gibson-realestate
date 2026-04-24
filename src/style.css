@@ -1,1 +1,158 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+@theme {
+    /* ── Colors ── */
+    --color-brand-charcoal: #444444;
+    --color-brand-dark: #111111;
+    --color-brand-accent: #810e2c;
+    --color-brand-cream: #f7f4ef;
+    --color-brand-white: #ffffff;
+    --color-brand-muted: #6b6b6b;
+    --color-brand-border: #e0dbd2;
+
+    /* ── Fonts ── */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', sans-serif;
+
+    /* ── Font sizes ── */
+    --text-hero: clamp(2.5rem, 6vw, 5rem);
+    --text-section: clamp(1.75rem, 3vw, 2.75rem);
+
+    /* ── Spacing ── */
+    --spacing-section: 6rem;
+    --spacing-nav: 1.25rem;
+
+    /* ── Transitions ── */
+    --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ── Base resets ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-brand-charcoal);
+    background-color: var(--color-brand-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography helpers ── */
+.font-display {
+    font-family: var(--font-display);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.text-hero {
+    font-size: var(--text-hero);
+}
+
+.text-section {
+    font-size: var(--text-section);
+}
+
+/* ── Luxury nav link style ── */
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-white);
+    text-decoration: none;
+    transition: color 0.25s var(--ease-luxury);
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-brand-accent);
+    transition: width 0.3s var(--ease-luxury);
+}
+
+.nav-link:hover {
+    color: var(--color-brand-accent);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ── Accent CTA button ── */
+.btn-accent {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-white);
+    background: transparent;
+    border: 1px solid var(--color-brand-accent);
+    padding: 0.875rem 2.5rem;
+    cursor: pointer;
+    transition: background 0.3s var(--ease-luxury), color 0.3s var(--ease-luxury);
+}
+
+.btn-accent:hover {
+    background: var(--color-brand-accent);
+    color: var(--color-brand-white);
+}
+
+/* ── Outlined dark button ── */
+.btn-outline-dark {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-brand-charcoal);
+    background: transparent;
+    border: 1px solid var(--color-brand-charcoal);
+    padding: 0.875rem 2.5rem;
+    cursor: pointer;
+    transition: background 0.3s var(--ease-luxury), color 0.3s var(--ease-luxury);
+}
+
+.btn-outline-dark:hover {
+    background: var(--color-brand-charcoal);
+    color: var(--color-brand-white);
+}
+
+/* ── Section label (small accent eyebrow text) ── */
+.label-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-brand-accent);
+}
+
+/* ── Divider ── */
+.divider-accent {
+    width: 3rem;
+    height: 1px;
+    background: var(--color-brand-accent);
+    margin: 1.25rem auto;
+}
