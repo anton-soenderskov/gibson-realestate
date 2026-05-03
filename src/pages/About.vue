@@ -13,7 +13,7 @@ const agentCards = Object.entries(imageFiles).map(([filepath, url]) => {
 });
 </script>
 <template>
-  <div class="bg-[var(--color-brand-cream)]">
+  <div class="bg-[var(--color-brand-white)]">
 
     <section class="bg-[var(--color-brand-dark)] text-[var(--color-brand-white)] py-20 px-6">
       <div class="max-w-7xl mx-auto">

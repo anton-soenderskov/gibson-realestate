@@ -3,24 +3,17 @@
 
 @theme {
     /* ── Colors ── */
-    /* Darkened from #555555 to #333333 for excellent contrast on white/cream */
     --color-brand-charcoal: #333333;
-    /* Darkened slightly for deeper contrast headers */
     --color-brand-dark: #1A1A1A;
     --color-brand-accent: #9B1C31;
-    /* Kept Original */
     --color-brand-accent-hover: #D42040;
-    /* Kept Original */
-    --color-brand-cream: #F8F8F8;
     --color-brand-white: #FFFFFF;
-    /* Darkened from #6b6b6b to #595959 so smaller text is easier to read */
     --color-brand-muted: #615A5A;
-    /* Slightly darker borders to frame content better */
     --color-brand-border: #D1D1D1;
 
     /* ── Fonts ── */
     --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Jost', sans-serif;
+    --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     /* ── Font sizes ── */
     --text-hero: clamp(2.5rem, 6vw, 5rem);
@@ -48,7 +41,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--color-brand-charcoal);
-    background-color: var(--color-brand-cream);
+    background-color: var(--color-brand-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* Explicitly set a comfortable base body size */

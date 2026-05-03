@@ -22,7 +22,7 @@ const stats = [
 </script>
 
 <template>
-  <div class="bg-[var(--color-brand-cream)]">
+  <div class="bg-[var(--color-brand-white)]">
 
     <!-- ── HERO ── -->
     <section class="relative bg-[var(--color-brand-dark)] text-[var(--color-brand-white)] overflow-hidden">
@@ -112,23 +112,23 @@ const stats = [
               <div class="flex flex-col gap-1.5">
                 <label class="label-eyebrow !text-[var(--color-brand-charcoal)]" for="s-name">Name</label>
                 <input id="s-name" v-model="sellerForm.name" type="text" placeholder="Anton Kristensen"
-                  class="w-full px-4 py-3 bg-[var(--color-brand-cream)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
+                  class="w-full px-4 py-3 bg-[var(--color-brand-white)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
               </div>
               <div class="flex flex-col gap-1.5">
                 <label class="label-eyebrow !text-[var(--color-brand-charcoal)]" for="s-phone">Phone</label>
                 <input id="s-phone" v-model="sellerForm.phone" type="tel" placeholder="(812) 000-0000"
-                  class="w-full px-4 py-3 bg-[var(--color-brand-cream)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
+                  class="w-full px-4 py-3 bg-[var(--color-brand-white)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
               </div>
             </div>
             <div class="flex flex-col gap-1.5">
               <label class="label-eyebrow !text-[var(--color-brand-charcoal)]" for="s-email">Email</label>
               <input id="s-email" v-model="sellerForm.email" type="email" placeholder="anton@example.com"
-                class="w-full px-4 py-3 bg-[var(--color-brand-cream)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
+                class="w-full px-4 py-3 bg-[var(--color-brand-white)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
             </div>
             <div class="flex flex-col gap-1.5">
               <label class="label-eyebrow !text-[var(--color-brand-charcoal)]" for="s-address">Property Address</label>
               <input id="s-address" v-model="sellerForm.address" type="text" placeholder="123 Main St, Terre Haute, IN"
-                class="w-full px-4 py-3 bg-[var(--color-brand-cream)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
+                class="w-full px-4 py-3 bg-[var(--color-brand-white)] border border-[var(--color-brand-border)] text-[var(--color-brand-dark)] text-base font-[var(--font-body)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:border-[var(--color-brand-accent)] transition-colors duration-200" />
             </div>
             <div>
               <BaseButton variant="primary" @click="submitSeller">Get My Free Valuation</BaseButton>

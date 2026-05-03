@@ -35,7 +35,7 @@ const filtered = computed(() =>
 </script>
 
 <template>
-  <div class="bg-[var(--color-brand-cream)]">
+  <div class="bg-[var(--color-brand-white)]">
 
     <!-- ── Hero banner ── -->
     <section class="bg-[var(--color-brand-dark)] text-[var(--color-brand-white)] py-20 px-6">
