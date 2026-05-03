@@ -22,6 +22,11 @@ const routes = [
         component: () => import('@/pages/Listings.vue'),
     },
     {
+        path: '/listwithus',
+        name: 'ListWithUs',
+        component: () => import('@/pages/ListWithUs.vue'),
+    },
+    {
         path: '/:pathMatch(.*)*',
         component: () => import('@/pages/NotFound.vue'),
     },

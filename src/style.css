@@ -1,16 +1,22 @@
-@import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
 
 @theme {
     /* ── Colors ── */
-    --color-brand-charcoal: #444444;
-    --color-brand-dark: #111111;
-    --color-brand-accent: #810e2c;
-    --color-brand-cream: #f7f4ef;
-    --color-brand-white: #ffffff;
-    --color-brand-muted: #6b6b6b;
-    --color-brand-border: #e0dbd2;
+    /* Darkened from #555555 to #333333 for excellent contrast on white/cream */
+    --color-brand-charcoal: #333333;
+    /* Darkened slightly for deeper contrast headers */
+    --color-brand-dark: #1A1A1A;
+    --color-brand-accent: #9B1C31;
+    /* Kept Original */
+    --color-brand-accent-hover: #D42040;
+    /* Kept Original */
+    --color-brand-cream: #F8F8F8;
+    --color-brand-white: #FFFFFF;
+    /* Darkened from #6b6b6b to #595959 so smaller text is easier to read */
+    --color-brand-muted: #615A5A;
+    /* Slightly darker borders to frame content better */
+    --color-brand-border: #D1D1D1;
 
     /* ── Fonts ── */
     --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -42,9 +48,12 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--color-brand-charcoal);
-    background-color: var(--color-brand-white);
+    background-color: var(--color-brand-cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Explicitly set a comfortable base body size */
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* ── Typography helpers ── */
@@ -67,9 +76,11 @@ body {
 /* ── Luxury nav link style ── */
 .nav-link {
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    /* Increased from 0.7rem */
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.15em;
+    /* Slightly reduced letter spacing since the font is bigger */
     text-transform: uppercase;
     color: var(--color-brand-white);
     text-decoration: none;
@@ -97,24 +108,48 @@ body {
     width: 100%;
 }
 
-/* ── Accent CTA button ── */
+/* ── Accent button (solid crimson) ── */
 .btn-accent {
     display: inline-block;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    /* Increased from 0.7rem */
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-brand-white);
+    background: var(--color-brand-accent);
+    border: 1px solid var(--color-brand-accent);
+    padding: 0.875rem 2.5rem;
+    cursor: pointer;
+    transition: background 0.3s var(--ease-luxury), border-color 0.3s var(--ease-luxury);
+}
+
+.btn-accent:hover {
+    background: var(--color-brand-accent-hover);
+    border-color: var(--color-brand-accent-hover);
+}
+
+/* ── Ghost accent button (crimson outline, transparent fill) ── */
+.btn-accent-ghost {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    /* Increased from 0.7rem */
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-brand-accent);
     background: transparent;
     border: 1px solid var(--color-brand-accent);
     padding: 0.875rem 2.5rem;
     cursor: pointer;
-    transition: background 0.3s var(--ease-luxury), color 0.3s var(--ease-luxury);
+    transition: background 0.3s var(--ease-luxury), color 0.3s var(--ease-luxury), border-color 0.3s var(--ease-luxury);
 }
 
-.btn-accent:hover {
+.btn-accent-ghost:hover {
     background: var(--color-brand-accent);
+    border-color: var(--color-brand-accent);
     color: var(--color-brand-white);
 }
 
@@ -122,9 +157,10 @@ body {
 .btn-outline-dark {
     display: inline-block;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    /* Increased from 0.7rem */
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-brand-charcoal);
     background: transparent;
@@ -142,9 +178,11 @@ body {
 /* ── Section label (small accent eyebrow text) ── */
 .label-eyebrow {
     font-family: var(--font-body);
-    font-size: 0.65rem;
+    font-size: 0.8rem;
+    /* Increased from 0.65rem */
     font-weight: 500;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
+    /* Slightly reduced spacing for readability */
     text-transform: uppercase;
     color: var(--color-brand-accent);
 }
